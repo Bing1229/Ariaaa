@@ -1,0 +1,18 @@
+{
+  "files": {
+    "events/guildMemberUpdate.js": [
+      {
+        "id": "5f1bcbb3-6b9b-41ca-b159-395207266476",
+        "line": 9,
+        "version": 582,
+        "index": 280
+      },
+      {
+        "id": "95ed333e-ac19-4b58-aec0-0d5a7bc278c8",
+        "line": 10,
+        "version": 582,
+        "index": 311
+      }
+    ]
+  }
+}

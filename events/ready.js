@@ -1,8 +1,10 @@
-const { Events } = require('discord.js');
+const { sequelize } = require('../db.js');
+
 module.exports = {
-  name: Events.CreateReady,
+  name: "ready",
   once: true,
-  execute(client) {
+  async execute(client) {
+    await sequelize.sync();
     console.log(`Ready! Logged in as ${client.user.tag}`);
   }
 }
