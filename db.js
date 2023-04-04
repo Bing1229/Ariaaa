@@ -1,6 +1,12 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize("sqlite::memory:");
+const sequelize = new Sequelize('database', 'user', 'password', {
+	host: 'localhost',
+	dialect: 'sqlite',
+	logging: false,
+	// SQLite only
+	storage: 'database.sqlite',
+});
 
 const welcome_db = sequelize.define('welcome_db', {
   role: {
