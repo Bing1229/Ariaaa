@@ -48,7 +48,7 @@ module.exports = {
     } else if (interaction.options.getSubcommand() === 'welcome') {
 
       //await interaction.deferReply();
-      if (interaction.user.id === '814548046628126740') {
+      if (interaction.user.id === '814548046628126740' || interaction.user.id === '907532318523133954') {
         const target_role_id = interaction.options.getRole('target').id;
         const target_webhook = interaction.options.getString('webhook');
         const target_welcome_msg = interaction.options.getString('welcome_msg');
