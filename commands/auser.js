@@ -23,6 +23,6 @@ const filteredMembers = guildMembers.filter(member => member.roles.cache.size > 
     const usernames = filteredMembers.map(member => member.user.username);
     const response = usernames.join('\n ');
     //console.log(response);
-    await interaction.reply({ content: `Users that has more than ${threshold} roles:\n${response}`, ephemeral: true });
+    await interaction.reply({ content: `${usernames.length} users that has more than ${threshold} roles:\n${response}`, ephemeral: true });
   },
 };
