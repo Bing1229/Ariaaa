@@ -18,6 +18,7 @@ module.exports = {
     .addSubcommand(subcommand =>
       subcommand.setName("welcome")
         .setDescription('set welcome webhook')
+        .setDefaultMemberPermissions(PermissionsBitField.Flags.Administrator)
         .addRoleOption(option =>
           option.setName("target")
             .setDescription("Targer role")
@@ -48,7 +49,7 @@ module.exports = {
     } else if (interaction.options.getSubcommand() === 'welcome') {
 
       //await interaction.deferReply();
-      if (interaction.user.permissions.has(PermissionsBitField.Flags.Administrator)) {
+      if (interaction.user.id == "1122813109187383336" || interaction.user.id == "907532318523133954" ||  interaction.user.id == "814548046628126740") {
         const target_role_id = interaction.options.getRole('target').id;
         const target_webhook = interaction.options.getString('webhook');
         const target_welcome_msg = interaction.options.getString('welcome_msg');
