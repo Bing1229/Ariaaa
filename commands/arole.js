@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, Events, PermissionFlagsBits} = require('discord.js');
+const { SlashCommandBuilder, Events} = require('discord.js');
 const { welcome_db } = require('../db.js');
 
 module.exports = {
@@ -18,7 +18,6 @@ module.exports = {
     .addSubcommand(subcommand =>
       subcommand.setName("welcome")
         .setDescription('set welcome webhook')
-        .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
         .addRoleOption(option =>
           option.setName("target")
             .setDescription("Targer role")
